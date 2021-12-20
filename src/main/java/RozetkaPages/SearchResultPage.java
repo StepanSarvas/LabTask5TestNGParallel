@@ -5,13 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class SearchResultPage extends DefaultPage {
 
     @FindBy(xpath = "//div[3]/div/rz-filter-searchline/div/input[contains(@class, 'sidebar-search__input')]")
     WebElement sidebarSearch;
 
-    @FindBy(xpath = "//rz-filter-section-autocomplete/ul/li/a/label")
+    @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label")
     WebElement brandCheckbox;
+
+    @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label")
+    private List<WebElement> listOfBrands;
+
+    public String chkBXList = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label";
 
     public void searchByBrand(final String brandName){
         sidebarSearch.sendKeys(brandName);
@@ -33,6 +40,8 @@ public class SearchResultPage extends DefaultPage {
     public WebElement getBrandCheckbox(){
         return brandCheckbox;
     }
+
+    public List<WebElement> getListOfBrands(){return listOfBrands;}
 
     public SearchResultPage(WebDriver driver) {
         super(driver);

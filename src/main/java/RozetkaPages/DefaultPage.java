@@ -1,5 +1,6 @@
 package RozetkaPages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,10 @@ public class DefaultPage {
         driver.manage().timeouts().implicitlyWait(holdTime, TimeUnit.SECONDS);
     }
 
+    public void scriptWait(long holdTime){
+        driver.manage().timeouts().setScriptTimeout(holdTime, TimeUnit.SECONDS);
+    }
+
     public void loadPageWaiter (long holdTime){
         new WebDriverWait(driver, holdTime).until(
                 webDriver -> ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"));
@@ -31,5 +36,11 @@ public class DefaultPage {
         WebDriverWait wait= new WebDriverWait(driver, holdTime);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public void oneElementLeftWaiter(long holdTime, String chkBXList){
+        WebDriverWait wait= new WebDriverWait(driver, holdTime);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath(chkBXList),1));
+    }
+
 
 }
