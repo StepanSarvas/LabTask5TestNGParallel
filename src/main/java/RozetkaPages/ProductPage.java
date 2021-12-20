@@ -42,4 +42,5 @@ public class ProductPage extends DefaultPage {
     public ProductPage(WebDriver driver) {
         super(driver);
     }
+
 }

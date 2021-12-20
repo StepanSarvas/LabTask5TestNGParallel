@@ -18,7 +18,7 @@ public class SearchResultPage extends DefaultPage {
     @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label")
     private List<WebElement> listOfBrands;
 
-    public String chkBXList = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label";
+    private String checkboxList = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-checkbox/ul[2]/li/a/label";
 
     public void searchByBrand(final String brandName){
         sidebarSearch.sendKeys(brandName);
@@ -41,7 +41,7 @@ public class SearchResultPage extends DefaultPage {
         return brandCheckbox;
     }
 
-    public List<WebElement> getListOfBrands(){return listOfBrands;}
+    public String getCheckboxList(){return checkboxList;}
 
     public SearchResultPage(WebDriver driver) {
         super(driver);

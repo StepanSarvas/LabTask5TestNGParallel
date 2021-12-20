@@ -1,8 +1,5 @@
 package parsers.jaxb;
 
-import ReadXML.SearchData;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
@@ -11,7 +8,6 @@ import java.util.List;
 
 
 @XmlRootElement(name = "allSearchData")
-//@XmlAccessorType(XmlAccessType.FIELD)
 public class AllSearchData {
 
     @XmlElement(name = "searchData")

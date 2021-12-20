@@ -37,9 +37,9 @@ public class DefaultPage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void oneElementLeftWaiter(long holdTime, String chkBXList){
+    public void oneElementLeftWaiter(long holdTime, String xpathOfList){
         WebDriverWait wait= new WebDriverWait(driver, holdTime);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath(chkBXList),1));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath(xpathOfList),1));
     }
 
 

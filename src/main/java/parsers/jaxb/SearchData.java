@@ -1,13 +1,10 @@
-package ReadXML;
+package parsers.jaxb;
 
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "searchData")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class SearchData {
 
     @XmlElement(name="keyword")
@@ -29,9 +26,6 @@ public class SearchData {
                 "keyword='" + keyword + '\'' +
                 ", brandName='" + brandName + '\'' +
                 ", priceValidation=" + priceValidation +
-                ", getKeyword='" + keyword + '\'' +
-                ", getBrandName='" + brandName + '\'' +
-                ", getPriceValidation=" + priceValidation +
                 '}';
     }
 
