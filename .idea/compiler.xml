@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="1" />
         <module name="LabTask4PageObject" />
+        <module name="LabTask5TestNGParallel" />
+        <module name="1" />
       </profile>
     </annotationProcessing>
   </component>

@@ -6,6 +6,7 @@ import parsers.jaxb.XMLParser;
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class testCartSum extends DefaultTest{
     private static final int TIME_TO_WAIT = 15;
@@ -13,7 +14,7 @@ public class testCartSum extends DefaultTest{
 //    private static String brandNameFromXML = parsers.jaxb.XMLParser.unmarshall().getBrandName();
 //    private static String priceValidationFromXML = XMLParser.unmarshall().getPriceValidation();
 
-    @DataProvider(name="data2", parallel = true)
+    @DataProvider(name="data2")
     public static Object [][] getData(){
         XMLParser xmlParser= new XMLParser();
         parsers.jaxb.AllSearchData allSearchData = xmlParser.unmarshall();
@@ -45,6 +46,16 @@ public class testCartSum extends DefaultTest{
         getProductPage().clickOnBuyButton();
         getProductPage().loadElementWaiter(TIME_TO_WAIT, getProductPage().getCartSum());
         assertEquals(getProductPage().getCartSumValue(), Integer.parseInt(searchData.getPriceValidation()));
+    }
+
+    @Test()
+    public void checkPriceOfSoundbar(){
+        assertTrue(getMainPage().logoRozetka().isDisplayed());
+    }
+
+    @Test()
+    public void checkPriceOfDisplay(){
+        assertTrue(getMainPage().topInfo().isDisplayed());
     }
 
 }

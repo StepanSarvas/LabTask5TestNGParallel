@@ -25,11 +25,17 @@ public class WebDriverManager {
     public static class Driver {
         private static WebDriver getChromeInstance() {
             System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
-            ChromeDriver chrome = new ChromeDriver();
+            ChromeDriver chrome = new ChromeDriver(options());
             chrome.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             chrome.manage().window().maximize();
             return chrome;
         }
 
+        private static ChromeOptions options() {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            return chromeOptions;
+        }
     }
 }
