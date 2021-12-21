@@ -20,8 +20,12 @@ public class SortedPage extends DefaultPage {
         sortingSelect.selectByIndex(2);
     }
 
+    public WebElement getFirstElement(){
+        return itemsOnThePage.get(0);
+    }
+
     public void clickOnFirstElement(){
-       itemsOnThePage.get(0).click();
+        getFirstElement().click();
     }
 
     public SortedPage(WebDriver driver) {

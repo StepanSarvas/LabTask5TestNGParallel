@@ -1,17 +1,17 @@
 <allSearchData>
     <searchData>
-        <keyword>телевізор</keyword>
-        <brandName>Philips</brandName>
-        <priceValidation>62855</priceValidation>
+        <keyword>посудомийка</keyword>
+        <brandName>Bosch</brandName>
+        <priceValidation>32999</priceValidation>
     </searchData>
     <searchData>
-        <keyword>саундбар</keyword>
-        <brandName>Yamaha</brandName>
-        <priceValidation>50000</priceValidation>
+        <keyword>кавоварка</keyword>
+        <brandName>philips</brandName>
+        <priceValidation>25999</priceValidation>
     </searchData>
     <searchData>
-        <keyword>монітор</keyword>
+        <keyword>планшет</keyword>
         <brandName>Samsung</brandName>
-        <priceValidation>49999</priceValidation>
+        <priceValidation>28888</priceValidation>
     </searchData>
 </allSearchData>

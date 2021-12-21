@@ -4,9 +4,7 @@
         <classes>
             <class name="testCartSum">
                 <methods>
-                    <include name="checkPriceOfTV"/>
-                    <include name="checkPriceOfSoundbar"/>
-                    <include name="checkPriceOfDisplay"/>
+                    <include name="checkPrice"/>
                 </methods>
             </class>
         </classes>

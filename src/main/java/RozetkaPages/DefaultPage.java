@@ -42,5 +42,4 @@ public class DefaultPage {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath(xpathOfList),1));
     }
 
-
 }
